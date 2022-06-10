@@ -1,0 +1,46 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.16",
+    "three": "^0.141.0"
+  },
+  "name": "viv2022website",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "build": "webpack"
+  },
+  "author": "Leon Poon",
+  "license": "ISC",
+  "description": "ThreeJS personal website for 3D rendering",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wannabeanimated/wannabeanimated2022.git"
+  },
+  "keywords": [
+    "3D",
+    "model",
+    "3dmodel",
+    "render",
+    "3drender",
+    "animation",
+    "animate",
+    "beauty",
+    "beautyproduct",
+    "makeup",
+    "feminine",
+    "blender",
+    "threejs"
+  ],
+  "bugs": {
+    "url": "https://github.com/wannabeanimated/wannabeanimated2022/issues"
+  },
+  "homepage": "https://github.com/wannabeanimated/wannabeanimated2022#readme"
+}

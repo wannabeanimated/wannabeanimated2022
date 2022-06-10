@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <%- include('./partials/nav.ejs') %>
+        <div class="overlay"></div>
+            <section class="faq">
+                <div>
+                    <div class="faqTitle">FAQ</div>
+                </div>
+                    <% if ((questions.length > 0) && (answers.length > 0)) { %>
+                        <div class="QABox">
+                        
+                            <% for (let i = 0; i < questions.length; i++) { %>
+
+                                <% if (i == questions.length - 1) { %>
+                                    <div class="btnContainer">
+                                        <div class="plusMinusBtn" id="<%= i %>">
+                                            <div class="verticalStroke"></div>
+                                            <div class="horizontalStroke"></div>
+                                        </div>
+                                    </div>
+
+                                <div class="questions lastFAQ" id="<%= i %>">
+
+                                    <%= questions[i] %>
+                                
+                                    <% } else { %>
+                                    <div class="btnContainer">
+                                        <div class="plusMinusBtn" id="<%= i %>">
+                                            <div class="verticalStroke"></div>
+                                            <div class="horizontalStroke"></div>
+                                        </div>
+                                    </div>
+                                <div class="questions" id="<%= i %>">
+                                    <%= questions[i] %>
+
+                                <% } %>
+
+                                    <% if (i == answers.length - 1) { %>
+
+                                        <div class="answers" id="<%= i %>">
+                                            <%= answers[i] %><br><br>
+                                            <a href="mailto:wannabe.animated@gmail.com"><button class="contactBtn">Contact Me</button></a>
+                                        </div>
+                                    <% } else { %>
+
+                                        <div class="answers" id="<%= i %>">
+                                            <%= answers[i] %>
+                                        </div>
+                                    <% } %>
+                                </div>
+            
+                            <% } %>
+                                </div>
+                            <% } else { %>
+
+                                <div class="questions"> No Questions at this time.</div>
+                            <% } %>
+            </section>
+        <%- include('./partials/footer.ejs') %>
+    </body>
+</html>

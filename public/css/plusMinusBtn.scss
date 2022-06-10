@@ -1,0 +1,39 @@
+$strokeColor: hsl(0, 0%, 0%);
+
+.btnContainer {
+    position: absolute;
+    transform: translate(20px, 23px);
+}
+
+.plusMinusBtn {
+    position: relative;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+
+    .horizontalStroke {
+        position: absolute;
+        border: 2px solid $strokeColor;
+        background-color: $strokeColor;
+        width: 80%;
+        transform: translate(3px, 15px);
+    }
+    .verticalStroke {
+        position: absolute;
+        border: 2px solid $strokeColor;
+        background-color: $strokeColor;
+        height: 80%;
+        transform: translate(15px, 3px);
+        opacity: 1;
+        transition: all 0.3s ease-in;
+    }
+}
+
+.plusMinusBtn.active {
+    
+    .verticalStroke {
+        transform: translate(15px, 3px) rotate(90deg);
+        opacity: 0;
+        transition: all 0.3s ease-in;
+    }
+}

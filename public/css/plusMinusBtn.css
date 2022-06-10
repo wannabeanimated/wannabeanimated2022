@@ -1,0 +1,42 @@
+.btnContainer {
+  position: absolute;
+  -webkit-transform: translate(20px, 23px);
+          transform: translate(20px, 23px);
+}
+
+.plusMinusBtn {
+  position: relative;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+
+.plusMinusBtn .horizontalStroke {
+  position: absolute;
+  border: 2px solid black;
+  background-color: black;
+  width: 80%;
+  -webkit-transform: translate(3px, 15px);
+          transform: translate(3px, 15px);
+}
+
+.plusMinusBtn .verticalStroke {
+  position: absolute;
+  border: 2px solid black;
+  background-color: black;
+  height: 80%;
+  -webkit-transform: translate(15px, 3px);
+          transform: translate(15px, 3px);
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.plusMinusBtn.active .verticalStroke {
+  -webkit-transform: translate(15px, 3px) rotate(90deg);
+          transform: translate(15px, 3px) rotate(90deg);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+/*# sourceMappingURL=plusMinusBtn.css.map */

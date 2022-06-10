@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <%- include('./partials/head.ejs') %>
+    <body>       
+        <%- include('./partials/nav.ejs') %> 
+        
+        <section class="populateVideos">
+            <% if (videos) { %>
+                <div class="flexWrap">
+                <% for (let i=0; i < videos.length; i++) { %>
+                    <div class="verticalVideo">
+                        <div class="loadIconPosition" id="<%= i %>">
+                            <div style="position: absolute">
+                                <div class="lds-dual-ring"></div>
+                            </div>
+                        </div>
+                        <iframe class='youtubeVideo'loading="lazy" width="392" height="700" src='<%= videos[i] %>' frameborder="0" allowfullscreen="" id="<%= i %>">
+                            Unable to Load videos at this time.
+                        </iframe>
+                    </div>
+                    <% } %>
+                </div>
+            <% } %>
+        </section>
+        
+        
+        <%- include('./partials/footer.ejs') %>
+    </body>
+</html>
